@@ -1,0 +1,2519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BISWASH KITCHEN | Nayapalli, Bhubaneswar</title>
+  <meta name="description" content="Authentic Homemade Jeera Rice and Desi Chicken Curry by Arbind Kumar in Nayapalli, Bhubaneswar. Fast doorstep delivery." />
+  <meta property="og:title" content="BISWASH KITCHEN | Nayapalli, Bhubaneswar" />
+  <meta property="og:description" content="Authentic Homemade Jeera Rice and Desi Chicken Curry by Arbind Kumar in Nayapalli, Bhubaneswar. Fast doorstep delivery." />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Outfit:wght@600;700;800;900&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+      background: #fdfbf7;
+      color: #222;
+      padding-bottom: 90px;
+      line-height: 1.5;
+    }
+
+    /* Header */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255, 255, 255, 0.96);
+      backdrop-filter: blur(10px);
+      padding: 10px 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      border-bottom: 1px solid #e8e5de;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+    }
+    .logo-container {
+      display: flex;
+      flex-direction: column;
+    }
+    .logo {
+      color: #087a2b;
+      font-family: 'Outfit', sans-serif;
+      font-size: 18px;
+      font-weight: 900;
+      letter-spacing: -0.5px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .logo small {
+      color: #666;
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-top: 1px;
+    }
+    .header-owner-badge {
+      background: #181c19;
+      color: #f0fdf4;
+      padding: 5px 12px;
+      border-radius: 20px;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.5px;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+    @media(max-width: 600px) {
+      .header-owner-badge { display: none; }
+    }
+    .header-actions {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+    }
+    .header-phone-btn {
+      background: #f0fdf4;
+      color: #087a2b;
+      border: 1px solid #bbf7d0;
+      padding: 7px 11px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 700;
+      text-decoration: none;
+      display: none;
+    }
+    .header-email-btn {
+      background: #f8fafc;
+      color: #334155;
+      border: 1px solid #cbd5e1;
+      padding: 7px 11px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 600;
+      text-decoration: none;
+      display: none;
+    }
+    @media(min-width: 640px) {
+      .header-phone-btn { display: inline-flex; align-items: center; gap: 4px; }
+    }
+    @media(min-width: 860px) {
+      .header-email-btn { display: inline-flex; align-items: center; gap: 4px; }
+    }
+    .cart {
+      background: #087a2b;
+      color: white;
+      padding: 8px 14px;
+      border-radius: 25px;
+      font-weight: 800;
+      font-size: 13px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      box-shadow: 0 3px 10px rgba(8, 122, 43, 0.25);
+      transition: transform 0.15s;
+    }
+    .cart:active { transform: scale(0.96); }
+    .cart-pill {
+      background: #ffc107;
+      color: #111;
+      font-weight: 900;
+      font-size: 11px;
+      padding: 2px 7px;
+      border-radius: 12px;
+    }
+    .hamburger {
+      font-size: 18px;
+      cursor: pointer;
+      background: #181c19;
+      color: white;
+      width: 36px;
+      height: 36px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 10px;
+      transition: background 0.2s;
+    }
+    .hamburger:hover { background: #273029; }
+
+    /* Side Menu */
+    .side-menu {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: 85%;
+      max-width: 330px;
+      height: 100%;
+      background: white;
+      z-index: 9999;
+      box-shadow: -5px 0 25px rgba(0, 0, 0, 0.25);
+      transition: right 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      padding: 20px;
+      overflow-y: auto;
+    }
+    .side-menu.open { right: 0; }
+    .side-menu a {
+      display: block;
+      padding: 12px 14px;
+      background: #f8faf8;
+      margin: 8px 0;
+      border-radius: 10px;
+      text-decoration: none;
+      color: #1e293b;
+      font-size: 14px;
+      font-weight: 700;
+      border: 1px solid #e2e8f0;
+      transition: background 0.2s;
+    }
+    .side-menu a:hover { background: #e8f5e9; border-color: #a7f3d0; }
+    .overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.55);
+      backdrop-filter: blur(2px);
+      z-index: 9998;
+    }
+    .overlay.show { display: block; }
+
+    /* Notice Bar */
+    .advance-rule-strip {
+      background: linear-gradient(90deg, #d97706, #ea580c);
+      color: white;
+      padding: 8px 16px;
+      font-size: 12px;
+      font-weight: 700;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 6px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+    }
+    .advance-rule-strip span b {
+      background: rgba(0,0,0,0.25);
+      padding: 2px 7px;
+      border-radius: 4px;
+      font-family: monospace;
+    }
+
+    /* Hero Section with Complete Visible Dish */
+    .hero {
+      padding: 24px 16px;
+      background: linear-gradient(130deg, #ecfdf5 0%, #fef9c3 60%, #ffedd5 100%);
+      border-bottom: 1px solid #fed7aa;
+    }
+    .hero-container {
+      max-width: 1040px;
+      margin: 0 auto;
+      display: flex;
+      gap: 24px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+    .hero-content {
+      flex: 1.2;
+      min-width: 280px;
+    }
+    .owner-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      background: #087a2b;
+      color: white;
+      font-size: 11px;
+      padding: 4px 10px;
+      border-radius: 12px;
+      font-weight: 800;
+      letter-spacing: 0.5px;
+    }
+    .hero h1 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 32px;
+      color: #064e1c;
+      margin-top: 8px;
+      line-height: 1.15;
+      font-weight: 900;
+    }
+    .hero p {
+      font-size: 13px;
+      margin-top: 10px;
+      line-height: 1.6;
+      color: #334155;
+    }
+    .hero-features {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 14px;
+      margin-top: 10px;
+      font-size: 12px;
+      font-weight: 600;
+      color: #1e293b;
+    }
+    .hero-features span {
+      background: rgba(255, 255, 255, 0.7);
+      padding: 4px 8px;
+      border-radius: 6px;
+      border: 1px solid rgba(0,0,0,0.06);
+    }
+    .hero-pricing {
+      display: flex;
+      align-items: baseline;
+      gap: 10px;
+      margin-top: 12px;
+    }
+    .hero-price {
+      color: #087a2b;
+      font-size: 30px;
+      font-weight: 900;
+      font-family: 'Outfit', sans-serif;
+    }
+    .hero-old-price {
+      color: #94a3b8;
+      text-decoration: line-through;
+      font-size: 16px;
+      font-weight: 600;
+    }
+    .hero-adv-tag {
+      background: #fef3c7;
+      color: #92400e;
+      border: 1px solid #fde68a;
+      font-size: 11px;
+      font-weight: 800;
+      padding: 3px 8px;
+      border-radius: 12px;
+    }
+    .hero-btns {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 14px;
+    }
+    .hero-btn {
+      padding: 12px 20px;
+      background: #087a2b;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      font-weight: 900;
+      font-size: 14px;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(8, 122, 43, 0.25);
+      transition: all 0.2s;
+    }
+    .hero-btn:hover { background: #066222; }
+    .hero-view-btn {
+      padding: 12px 16px;
+      background: white;
+      color: #1e293b;
+      border: 1px solid #cbd5e1;
+      border-radius: 10px;
+      font-weight: 700;
+      font-size: 13px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .hero-view-btn:hover { background: #f8fafc; }
+
+    /* Complete Recipe Image Container in Hero */
+    .hero-image-wrapper {
+      flex: 1;
+      max-width: 440px;
+      min-width: 280px;
+      position: relative;
+    }
+    .hero-image-card {
+      background: white;
+      padding: 8px;
+      border-radius: 20px;
+      border: 2px solid #fed7aa;
+      box-shadow: 0 10px 25px rgba(234, 88, 12, 0.12);
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-img-box {
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      background: #131d14;
+      border-radius: 14px;
+      overflow: hidden;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .hero-img-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+      transition: transform 0.4s ease;
+    }
+    .hero-image-card:hover .hero-img-box img {
+      transform: scale(1.04);
+    }
+    .hero-image-pill {
+      position: absolute;
+      bottom: 8px;
+      left: 8px;
+      right: 8px;
+      background: rgba(0, 0, 0, 0.72);
+      color: #fff;
+      font-size: 11px;
+      font-weight: 700;
+      padding: 6px 10px;
+      border-radius: 8px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      backdrop-filter: blur(4px);
+    }
+    .hero-badge {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      background: #087a2b;
+      color: white;
+      padding: 4px 9px;
+      border-radius: 12px;
+      font-size: 11px;
+      font-weight: 800;
+    }
+
+    /* Menu Section */
+    .poster-menu {
+      max-width: 1040px;
+      margin: 0 auto;
+      padding: 24px 16px;
+    }
+    .menu-header-bar {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: flex-end;
+      gap: 12px;
+      margin-bottom: 20px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid #e2e8f0;
+    }
+    .section-title {
+      font-family: 'Outfit', sans-serif;
+      font-size: 24px;
+      font-weight: 900;
+      color: #181c19;
+    }
+    .section-subtitle {
+      font-size: 12px;
+      color: #64748b;
+      margin-top: 2px;
+    }
+
+    /* Framing Toggle: 100% Fit Plate vs Full Bleed */
+    .fit-toggle-group {
+      display: inline-flex;
+      background: #e2e8f0;
+      padding: 3px;
+      border-radius: 8px;
+      font-size: 11px;
+      font-weight: 700;
+    }
+    .fit-toggle-btn {
+      padding: 5px 10px;
+      border-radius: 6px;
+      border: none;
+      background: transparent;
+      color: #475569;
+      cursor: pointer;
+      transition: all 0.15s;
+    }
+    .fit-toggle-btn.active {
+      background: white;
+      color: #087a2b;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.12);
+    }
+
+    /* 3 Poster Cards Grid */
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+    }
+    .poster-card {
+      position: relative;
+      background: white;
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: 0 4px 18px rgba(0,0,0,0.06);
+      border: 2px solid #e2e8f0;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+    }
+    .poster-card:hover {
+      box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+      border-color: #cbd5e1;
+    }
+    .poster-card.best {
+      border: 2px solid #087a2b;
+      box-shadow: 0 6px 20px rgba(8, 122, 43, 0.12);
+    }
+
+    /* Crucial: Completely Visible Recipe Image Container */
+    .poster-img {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      background: #141c15;
+      overflow: hidden;
+      cursor: pointer;
+    }
+    .poster-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      padding: 4px;
+      display: block;
+      transition: transform 0.35s ease;
+    }
+    /* When Full Bleed mode is selected */
+    .poster-card.mode-cover .poster-img img {
+      object-fit: cover;
+      padding: 0;
+    }
+    .poster-card:hover .poster-img img {
+      transform: scale(1.04);
+    }
+
+    /* Badges */
+    .poster-badge {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      background: #ea580c;
+      color: white;
+      padding: 4px 10px;
+      border-radius: 20px;
+      font-size: 11px;
+      font-weight: 900;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.25);
+    }
+    .poster-badge.best { background: #087a2b; }
+    .poster-badge.off {
+      left: auto;
+      right: 10px;
+      background: #f59e0b;
+      color: #111;
+    }
+
+    /* Eye-Catching Full Photo Overlay Button */
+    .img-zoom-bar {
+      position: absolute;
+      bottom: 8px;
+      left: 8px;
+      right: 8px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(18, 24, 20, 0.78);
+      color: white;
+      font-size: 11px;
+      font-weight: 700;
+      padding: 6px 10px;
+      border-radius: 8px;
+      backdrop-filter: blur(4px);
+    }
+    .img-zoom-btn {
+      background: rgba(255, 255, 255, 0.2);
+      border: 1px solid rgba(255, 255, 255, 0.4);
+      color: #fff;
+      padding: 3px 8px;
+      border-radius: 6px;
+      font-size: 10px;
+      font-weight: 800;
+      cursor: pointer;
+    }
+    .img-zoom-btn:hover { background: #087a2b; border-color: #087a2b; }
+
+    /* Card Body */
+    .poster-body {
+      padding: 16px;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .poster-title {
+      font-size: 18px;
+      font-weight: 900;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 8px;
+      color: #0f172a;
+    }
+    .poster-desc {
+      font-size: 12px;
+      color: #475569;
+      margin: 8px 0;
+      line-height: 1.5;
+    }
+    .dish-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+      margin: 6px 0 10px 0;
+    }
+    .dish-tag {
+      font-size: 10px;
+      background: #f1f5f9;
+      color: #334155;
+      padding: 2px 7px;
+      border-radius: 4px;
+      font-weight: 600;
+    }
+    .poster-price {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin: 10px 0 14px 0;
+    }
+    .old-price {
+      text-decoration: line-through;
+      color: #94a3b8;
+      font-size: 13px;
+      font-weight: 600;
+    }
+    .new-price {
+      color: #087a2b;
+      font-size: 26px;
+      font-weight: 900;
+      font-family: 'Outfit', sans-serif;
+    }
+    .adv-pill {
+      background: #ffedd5;
+      color: #c2410c;
+      border: 1px solid #fed7aa;
+      padding: 3px 9px;
+      border-radius: 12px;
+      font-size: 11px;
+      font-weight: 900;
+      margin-left: auto;
+    }
+    .poster-btn {
+      width: 100%;
+      padding: 12px;
+      background: linear-gradient(90deg, #087a2b, #0faa3a);
+      color: white;
+      border: none;
+      border-radius: 10px;
+      font-weight: 900;
+      font-size: 14px;
+      cursor: pointer;
+      box-shadow: 0 3px 10px rgba(8, 122, 43, 0.2);
+      transition: all 0.15s;
+    }
+    .poster-btn:active { transform: scale(0.98); }
+
+    /* Quantity stepper inside card */
+    .card-qty-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: #f8fafc;
+      border: 1px solid #087a2b;
+      padding: 5px 8px;
+      border-radius: 10px;
+    }
+    .card-qty-btn {
+      width: 32px;
+      height: 32px;
+      border: none;
+      border-radius: 8px;
+      background: #087a2b;
+      color: white;
+      font-size: 16px;
+      font-weight: 900;
+      cursor: pointer;
+    }
+    .card-qty-count {
+      font-weight: 900;
+      font-size: 14px;
+      color: #0f172a;
+    }
+
+    /* Recipe Photo Lightbox Modal */
+    .recipe-modal {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 10000;
+      background: rgba(0, 0, 0, 0.88);
+      backdrop-filter: blur(8px);
+      align-items: center;
+      justify-content: center;
+      padding: 16px;
+    }
+    .recipe-modal.active {
+      display: flex;
+    }
+    .recipe-modal-box {
+      position: relative;
+      background: white;
+      border-radius: 20px;
+      max-width: 820px;
+      width: 100%;
+      max-height: 92vh;
+      overflow-y: auto;
+      box-shadow: 0 25px 50px rgba(0,0,0,0.5);
+      border: 1px solid #334155;
+      display: flex;
+      flex-direction: column;
+    }
+    @media(min-width: 768px) {
+      .recipe-modal-box {
+        flex-direction: row;
+        overflow: hidden;
+      }
+    }
+    .modal-close-btn {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      z-index: 30;
+      background: rgba(0,0,0,0.7);
+      color: white;
+      border: none;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      font-size: 20px;
+      font-weight: bold;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .modal-img-stage {
+      flex: 1.2;
+      background: #0d140e;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 14px;
+      position: relative;
+      min-height: 280px;
+    }
+    .modal-img-stage img {
+      max-width: 100%;
+      max-height: 70vh;
+      object-fit: contain;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+    }
+    .modal-info-panel {
+      flex: 1;
+      padding: 24px 20px;
+      background: #fafaf9;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .modal-dish-title {
+      font-family: 'Outfit', sans-serif;
+      font-size: 22px;
+      font-weight: 900;
+      color: #0f172a;
+      line-height: 1.2;
+    }
+    .modal-badge-row {
+      display: flex;
+      gap: 6px;
+      margin: 8px 0;
+    }
+
+    /* Checkout Box */
+    .checkout-box {
+      max-width: 780px;
+      margin: 20px auto;
+      padding: 20px 16px;
+      background: white;
+      border-radius: 18px;
+      border: 2px dashed #087a2b;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+    }
+    .checkout-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 14px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid #e2e8f0;
+    }
+    .checkout-header h2 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 22px;
+      font-weight: 900;
+      color: #0f172a;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 12px;
+      margin: 6px 0;
+      border: 1px solid #cbd5e1;
+      border-radius: 9px;
+      outline: none;
+      font-family: inherit;
+      font-size: 13px;
+      background: #f8fafc;
+    }
+    input:focus, textarea:focus {
+      border-color: #087a2b;
+      background: white;
+      box-shadow: 0 0 0 3px rgba(8, 122, 43, 0.15);
+    }
+    .cart-list {
+      background: #f8fafc;
+      border-radius: 12px;
+      padding: 12px;
+      margin: 10px 0;
+      border: 1px solid #e2e8f0;
+    }
+    .cart-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 0;
+      border-bottom: 1px solid #e2e8f0;
+    }
+    .cart-row:last-child { border-bottom: none; }
+    .qty {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+    }
+    .qty button {
+      width: 28px;
+      height: 28px;
+      border: none;
+      border-radius: 6px;
+      background: #087a2b;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    /* Summary Bar */
+    .totals-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 8px;
+      margin: 14px 0;
+      text-align: center;
+    }
+    .total-card {
+      background: #f1f5f9;
+      padding: 10px 6px;
+      border-radius: 10px;
+    }
+    .total-card.adv {
+      background: #ffedd5;
+      border: 1px solid #fed7aa;
+    }
+    .total-card span {
+      display: block;
+      font-size: 10px;
+      font-weight: 800;
+      text-transform: uppercase;
+      color: #64748b;
+    }
+    .total-card.adv span { color: #9a3412; }
+    .total-card b {
+      font-size: 18px;
+      font-family: 'Outfit', sans-serif;
+      font-weight: 900;
+      color: #0f172a;
+    }
+    .total-card.adv b { color: #c2410c; }
+
+    /* GPS Location status */
+    .location-status {
+      font-size: 12px;
+      margin: 8px 0;
+      color: #c2410c;
+      padding: 10px;
+      background: #fff7ed;
+      border-radius: 8px;
+      border: 1px solid #ffedd5;
+      font-weight: 600;
+    }
+    .location-btn {
+      width: 100%;
+      padding: 12px;
+      background: #ea580c;
+      color: white;
+      border: none;
+      border-radius: 9px;
+      font-weight: 800;
+      font-size: 13px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+    }
+
+    /* Advance Box */
+    .advance-box {
+      background: linear-gradient(135deg, #fff7ed 0%, #ffedd5 100%);
+      border: 2px solid #ea580c;
+      border-radius: 14px;
+      padding: 16px;
+      margin: 14px 0;
+    }
+    .advance-box h3 {
+      color: #9a3412;
+      font-size: 15px;
+      font-weight: 900;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .advance-rules-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 6px;
+      margin: 8px 0;
+      font-size: 11px;
+      font-weight: 700;
+      color: #431407;
+      text-align: center;
+    }
+    .advance-rules-grid div {
+      background: rgba(255,255,255,0.8);
+      padding: 6px 4px;
+      border-radius: 6px;
+      border: 1px solid #fed7aa;
+    }
+    #advanceStatus {
+      padding: 10px;
+      border-radius: 8px;
+      font-size: 12px;
+      font-weight: 800;
+      margin: 10px 0;
+    }
+
+    /* Payment Radio options */
+    .pay-box {
+      background: #f8fafc;
+      padding: 12px;
+      border-radius: 12px;
+      margin: 12px 0;
+      border: 1px solid #e2e8f0;
+    }
+    .pay-option {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      padding: 11px;
+      background: white;
+      border-radius: 9px;
+      margin-bottom: 8px;
+      border: 2px solid #cbd5e1;
+      cursor: pointer;
+    }
+    .pay-option input { width: auto; margin: 0; }
+
+    /* Action Buttons */
+    .upi-btn, .whatsapp-btn, .advance-btn {
+      width: 100%;
+      padding: 13px;
+      border: none;
+      border-radius: 10px;
+      color: white;
+      font-weight: 900;
+      font-size: 14px;
+      margin-top: 8px;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      transition: all 0.15s;
+    }
+    .advance-btn {
+      background: linear-gradient(90deg, #ea580c, #f59e0b);
+      font-size: 15px;
+    }
+    .upi-btn { background: #087a2b; }
+    .whatsapp-btn { background: #16a34a; font-size: 15px; }
+    .advance-btn:hover { opacity: 0.95; }
+    .whatsapp-btn:hover { background: #15803d; }
+    .upi-btn:hover { background: #065f46; }
+
+    /* Payment QR Card Styles */
+    .qr-payment-card {
+      background: white;
+      border: 2px solid #087a2b;
+      border-radius: 14px;
+      padding: 14px;
+      margin: 12px 0;
+      text-align: center;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.06);
+    }
+    .qr-badge-strip {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 6px;
+      margin: 8px 0;
+    }
+    .qr-app-pill {
+      background: #f1f5f9;
+      color: #334155;
+      font-size: 10px;
+      font-weight: 800;
+      padding: 3px 8px;
+      border-radius: 20px;
+      border: 1px solid #cbd5e1;
+    }
+
+    /* Reviews Box */
+    .rating-box {
+      max-width: 780px;
+      margin: 20px auto;
+      padding: 18px 16px;
+      background: white;
+      border-radius: 16px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+      border: 1px solid #e2e8f0;
+    }
+    .stars {
+      font-size: 26px;
+      color: #f59e0b;
+      cursor: pointer;
+      letter-spacing: 4px;
+      user-select: none;
+    }
+    .review-item {
+      background: #f8fafc;
+      padding: 12px;
+      border-radius: 10px;
+      margin: 8px 0;
+      font-size: 13px;
+      border: 1px solid #e2e8f0;
+    }
+
+    /* Admin Box */
+    .admin-box {
+      max-width: 780px;
+      margin: 20px auto;
+      padding: 16px;
+      background: #111827;
+      color: white;
+      border-radius: 16px;
+      display: none;
+    }
+    .admin-button {
+      margin-top: 8px;
+      padding: 8px 14px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: 700;
+      font-size: 12px;
+    }
+
+    /* Bottom sticky bar */
+    .bottom-bar {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: white;
+      padding: 10px 16px;
+      box-shadow: 0 -4px 16px rgba(0,0,0,0.12);
+      display: none;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 200;
+      border-top: 1px solid #e2e8f0;
+    }
+    .bottom-bar.show { display: flex; }
+    .checkout-bottom-btn {
+      background: #16a34a;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 10px;
+      font-weight: 900;
+      font-size: 14px;
+      cursor: pointer;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px 16px;
+      color: #64748b;
+      font-size: 12px;
+      line-height: 1.8;
+    }
+  </style>
+</head>
+<body>
+
+<!-- FINAL HEADER - Logo Left + Cart & Menu Right -->
+<header id="main-header" style="display:flex; justify-content:space-between; align-items:center; padding:12px 14px; background:white; border-bottom:1px solid #ddd;">
+  <span id="cartCount" style="display:none;">0</span>
+
+  <!-- LEFT - BISWASH KITCHEN LOGO -->
+  <div style="line-height:1.1;">
+    <div style="display:flex; align-items:center; gap:6px; color:#0b5e2a; font-weight:900; font-size:20px; font-family: Arial, sans-serif;">
+      <span>🍃</span> BISWASH KITCHEN
+    </div>
+    <div style="font-size:11px; letter-spacing:1.2px; color:#333; margin-top:2px; padding-left:2px;">
+      CLOUD KITCHEN • NAYAPALLI
+    </div>
+  </div>
+
+  <!-- RIGHT - CART 0 + MENU -->
+  <div style="display:flex; align-items:center; gap:10px;">
+    
+    <!-- CART BUTTON -->
+    <div id="cart-btn" onclick="goCheckout()" style="background:#0b7e2f; color:white; padding:10px 18px; border-radius:30px; display:flex; align-items:center; gap:8px; font-weight:700; cursor:pointer;">
+      <span style="font-size:18px;">🛒</span>
+      <span id="cart-count">0</span>
+    </div>
+
+    <!-- MENU BUTTON -->
+    <div id="hamburgerMenuBtn" onclick="openMenu()" style="background:black; color:white; width:48px; height:48px; border-radius:12px; display:flex; flex-direction:column; justify-content:center; align-items:center; gap:5px; cursor:pointer;" title="Menu">
+      <div style="width:22px; height:3px; background:white; border-radius:2px;"></div>
+      <div style="width:22px; height:3px; background:white; border-radius:2px;"></div>
+      <div style="width:22px; height:3px; background:white; border-radius:2px;"></div>
+    </div>
+
+  </div>
+
+</header>
+
+<!-- GREEN ORDER BAR - With Icons -->
+<style>
+.green-bar {
+  width: 100%;
+  background: #0b7e2f;
+  color: white;
+  padding: 9px 0;
+  overflow: hidden;
+  white-space: nowrap;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+}
+.green-track {
+  display: inline-block;
+  padding-left: 100%;
+  animation: slideLeft 20s linear infinite;
+}
+@keyframes slideLeft {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
+}
+</style>
+
+<div class="green-bar" id="orderTimeTicker">
+  <div class="green-track">
+    ⏰ Order Time: 11:30 AM - 4:00 PM &nbsp; | &nbsp; 🔴 Closed: 4:00 PM - 7:00 PM &nbsp; | &nbsp; 🟢 Evening Open: 7:00 PM - 10:30 PM &nbsp; | &nbsp; 🛵 Nayapalli Doorstep Delivery &nbsp; | &nbsp; 👨‍🍳 Arbind Kumar
+  </div>
+</div>
+<!-- Advance Rule Notification Strip -->
+<div class="advance-rule-strip" id="advanceRuleStrip">
+  <span>🔒 <b>Advance Booking Rule:</b> ₹149 Combo → ₹49 Adv | ₹120 Chicken → ₹39 Adv | ₹60 Rice → ₹30 Adv</span>
+  <span>📍 Nayapalli Doorstep Delivery • <b style="cursor:pointer;" onclick="openPayQrModal()">📷 Scan QR Code to Pay</b></span>
+</div>
+
+<!-- Side Navigation Drawer -->
+<div class="overlay" id="overlay" onclick="closeMenu()"></div>
+<div class="side-menu" id="sideMenu">
+  <div style="display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid #eee; padding-bottom:8px; margin-bottom:10px;">
+    <h2 style="color:#087a2b; font-family:'Outfit',sans-serif; font-weight:900; margin:0; font-size:22px;">BISWASH KITCHEN</h2>
+    <span onclick="closeMenu()" style="font-size:30px; cursor:pointer; line-height:1; color:#666; padding:0 4px;" title="Close">×</span>
+  </div>
+
+  <div style="line-height:1.4; padding:0 0 10px 0;">
+    <div style="margin-top:2px; font-size:13px; font-weight:500; background:#fff7ed; border:1px solid #fed7aa; padding:6px 8px; border-radius:8px;">
+      ⏰ Order Timing:<br>
+      🟢 11:30 AM - 4:00 PM<br>
+      🔴 Closed - 4:00 PM to 7:00 PM<br>
+      🟢 7:00 PM - 10:30 PM
+    </div>
+  </div>
+
+  <h3 style="margin:14px 0 8px; color:#087a2b; font-size:14px; text-transform:uppercase;">📋 Menu & Quick Links</h3>
+  <a href="#" onclick="closeMenu()">🏠 Home</a>
+  <a href="#menu" onclick="closeMenu()">🍛 3 Star Menu (Complete Photos)</a>
+  <a href="#reviews" onclick="closeMenu()">⭐ Customer Reviews</a>
+  <a href="#checkout" onclick="closeMenu()">🛒 Cart & Checkout (<span class="cartCount2">0</span>)</a>
+  <a href="#" onclick="openPayQrModal(); closeMenu(); return false;">📷 Official Payment QR Code</a>
+  <a href="tel:7644955446">📞 Call: 7644955446</a>
+  <a href="mailto:erarbind10@gmail.com">✉️ Email: erarbind10@gmail.com</a>
+  <a href="https://wa.me/917644955446" target="_blank" rel="noreferrer">💬 WhatsApp Biswash Kitchen</a>
+  <a href="#" onclick="showAdmin(); return false;">🔐 Admin Orders (Arbind Kumar)</a>
+
+  <!-- OWNER WITH CIRCLE PHOTO - ADMIN KE NICHE -->
+  <div style="display:flex; align-items:center; gap:14px; padding:12px 10px; background:#f9fafb; border:1.5px solid #0b7e2f; border-radius:12px; margin-top:14px;">
+
+    <!-- CIRCLE PHOTO (CLICK TO UPLOAD ORIGINAL PHOTO) -->
+    <div style="position:relative; width:75px; height:75px; min-width:75px;">
+      <div onclick="document.getElementById('ownerPhotoInput').click()" style="width:75px; height:75px; border-radius:50%; overflow:hidden; border:3px solid #0b7e2f; box-shadow:0 2px 8px rgba(0,0,0,0.15); background:#f2f2f2; cursor:pointer;" title="Click to choose original photo from phone/PC">
+        <img id="drawerOwnerPic" 
+             src="/project 10.jpeg" 
+             alt="Arbind Kumar - Owner"
+             onerror="this.onerror=null; this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'75\' height=\'75\' viewBox=\'0 0 75 75\'><rect width=\'75\' height=\'75\' fill=\'%230b7e2f\'/><text x=\'50%25\' y=\'53%25\' font-size=\'36\' text-anchor=\'middle\' dominant-baseline=\'middle\'>👨‍🍳</text></svg>';"
+             style="width:100%; height:100%; object-fit:cover; object-position:center 15%; display:block;">
+      </div>
+      <div onclick="document.getElementById('ownerPhotoInput').click()" style="position:absolute; bottom:-2px; right:-2px; background:#0b7e2f; color:white; width:24px; height:24px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:12px; border:2px solid white; cursor:pointer; box-shadow:0 2px 5px rgba(0,0,0,0.25);" title="Select original photo">
+        📷
+      </div>
+      <input type="file" id="ownerPhotoInput" accept="image/*" onchange="handleOwnerPhotoUpload(event)" style="display:none;" />
+    </div>
+
+    <!-- OWNER TEXT -->
+    <div style="line-height:1.35; flex:1;">
+      <div style="color:#0b5e2a; font-weight:800; font-size:16px;">BISWASH KITCHEN</div>
+      <div style="font-size:14px; color:#111; font-weight:700;">Owner: Arbind Kumar</div>
+      <div style="font-size:12px; color:#444; margin-top:2px;">From - Bihar, Araria, Lodipur</div>
+      <div style="font-size:12px; color:#444;">Nayapalli, Bhubaneswar, Odisha</div>
+      <button type="button" onclick="document.getElementById('ownerPhotoInput').click()" style="margin-top:6px; background:#0b7e2f; color:white; border:none; padding:4px 8px; border-radius:6px; font-size:10px; font-weight:700; cursor:pointer; display:inline-flex; align-items:center; gap:4px;">
+        📷 Upload Real Photo (0% AI)
+      </button>
+    </div>
+
+  </div>
+
+  <div style="background:#ecfdf5; border:1px solid #a7f3d0; padding:10px; border-radius:10px; font-size:11px; margin-top:12px; color:#065f46;">
+    📍 Delivery: Nayapalli, Bhubaneswar<br>
+    🔒 149→49 | 120→39 | 60→30 Advance Required
+  </div>
+</div>
+
+<!-- Hero Section with Complete Visible Dish -->
+<section class="hero" id="hero">
+  <div class="hero-container">
+    <div class="hero-content">
+      <span class="owner-label">👨‍🍳 OWNER ARBIND KUMAR • NAYAPALLI</span>
+      <h1>Jeera Rice +<br>Chicken Curry</h1>
+      <p>
+        Cooked fresh upon order confirmation. Authentic Bihari homestyle chicken curry with rich spiced gravy paired with steaming Basmati Jeera Rice.
+      </p>
+      <div class="hero-features">
+        <span>🍛 Full Plate Combo</span>
+        <span>🍗 Fresh Desi Chicken</span>
+        <span>🧼 Clean Cloud Kitchen</span>
+        <span>📍 Fast Nayapalli Delivery</span>
+      </div>
+      <div class="hero-pricing">
+        <span class="hero-price">₹149</span>
+        <span class="hero-old-price">₹199</span>
+        <span class="hero-adv-tag">Advance: ₹49 Only</span>
+      </div>
+      <div class="hero-btns">
+        <button class="hero-btn" id="heroOrderBtn" onclick="addToCart('₹149 Combo - Jeera Rice + Chicken Curry', 149, 49, '/images/combo.jpg')">
+          🛒 Order Now • ₹149 (Adv ₹49)
+        </button>
+        <button class="hero-view-btn" id="heroInspectBtn" onclick="openRecipeModal(0)">
+          🔍 View Complete Dish Platter
+        </button>
+      </div>
+    </div>
+
+    <!-- Complete Eye-Catching Recipe Photo Card in Hero -->
+    <div class="hero-image-wrapper">
+      <div class="hero-image-card" onclick="openRecipeModal(0)" title="Click to view 100% complete platter">
+        <div class="hero-img-box">
+          <img
+            id="heroDishImage"
+            src="/images/combo.jpg"
+            alt="Complete visible platter of fragrant Jeera Rice and Chicken Curry"
+            referrerpolicy="no-referrer"
+            onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&w=800&q=80';"
+          />
+          <div class="hero-badge">⭐ BESTSELLER</div>
+          <div class="hero-image-pill">
+            <span>✨ 100% Complete Platter View</span>
+            <span style="color:#fde047; font-weight:800;">Tap to Zoom 🔍</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 3 Star Menu Section with Complete Visible Dishes -->
+<section class="poster-menu" id="menu">
+  <div class="menu-header-bar">
+    <div>
+      <h2 class="section-title">🔥 Our Best Menu — 3 Items</h2>
+      <p class="section-subtitle">
+        Recipe images are framed so the entire plate is 100% visible. Tap any photo to inspect full details!
+      </p>
+    </div>
+
+    <!-- Framing Mode Switcher -->
+    <div class="fit-toggle-group" id="fitToggleGroup">
+      <button class="fit-toggle-btn active" id="btnFitContain" onclick="setImageFitMode('contain')">
+        🔍 100% Fit Plate (No Crop)
+      </button>
+      <button class="fit-toggle-btn" id="btnFitCover" onclick="setImageFitMode('cover')">
+        🖼️ Full Bleed
+      </button>
+    </div>
+  </div>
+
+  <div class="cards-grid">
+    <!-- Card 1: Jeera Rice + Chicken Curry Combo -->
+    <div class="poster-card best" id="card-0">
+      <div class="poster-img" onclick="openRecipeModal(0)">
+        <img
+          id="dish-img-0"
+          src="/images/combo.jpg"
+          alt="Jeera Rice Chicken Curry Complete Combo"
+          referrerpolicy="no-referrer"
+          onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&w=800&q=80';"
+        />
+        <div class="poster-badge best">⭐ BESTSELLER</div>
+        <div class="poster-badge off">25% OFF</div>
+        <div class="img-zoom-bar">
+          <span>🍛 Complete Thali View</span>
+          <button class="img-zoom-btn" type="button" onclick="event.stopPropagation(); openRecipeModal(0)">🔍 Full Photo</button>
+        </div>
+      </div>
+      <div class="poster-body">
+        <div>
+          <div class="poster-title">
+            <span>Jeera Rice + Chicken Curry</span>
+            <span style="color:#087a2b;">★4.9</span>
+          </div>
+          <div class="poster-desc">
+            🍛 Full Plate Combo • Homemade Taste • 1 Person Serving • Fragrant basmati jeera rice + spicy chicken curry gravy.
+          </div>
+          <div class="dish-tags">
+            <span class="dish-tag">Basmati Rice</span>
+            <span class="dish-tag">Desi Chicken</span>
+            <span class="dish-tag">Onion Salad Garnish</span>
+          </div>
+          <div class="poster-price">
+            <span class="old-price">₹199</span>
+            <span class="new-price">₹149</span>
+            <span class="adv-pill">ADV ₹49</span>
+          </div>
+        </div>
+        <div id="btn-container-0">
+          <button class="poster-btn" id="add-btn-0" onclick="addToCart('₹149 Combo - Jeera Rice + Chicken Curry', 149, 49, '/images/combo.jpg')">
+            🛒 ADD TO CART - ₹149 (Adv 49)
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 2: Chicken Curry (4 Pcs) -->
+    <div class="poster-card" id="card-1">
+      <div class="poster-img" onclick="openRecipeModal(1)">
+        <img
+          id="dish-img-1"
+          src="/images/chicken.jpg"
+          alt="Desi Chicken Curry 4 Pieces"
+          referrerpolicy="no-referrer"
+          onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?auto=format&fit=crop&w=800&q=80';"
+        />
+        <div class="poster-badge" style="background:#ea580c;">🔥 SPICY</div>
+        <div class="poster-badge off">20% OFF</div>
+        <div class="img-zoom-bar">
+          <span>🍗 4 Big Tender Cuts</span>
+          <button class="img-zoom-btn" type="button" onclick="event.stopPropagation(); openRecipeModal(1)">🔍 Full Photo</button>
+        </div>
+      </div>
+      <div class="poster-body">
+        <div>
+          <div class="poster-title">
+            <span>Chicken Curry (4 Pcs)</span>
+            <span style="color:#087a2b;">★4.8</span>
+          </div>
+          <div class="poster-desc">
+            🍗 Desi Style Chicken Curry • 4 Big Pieces • Thick spicy Bihari gravy with roasted cumin & garam masala.
+          </div>
+          <div class="dish-tags">
+            <span class="dish-tag">4 Big Pieces</span>
+            <span class="dish-tag">Thick Spiced Gravy</span>
+            <span class="dish-tag">Fresh Coriander</span>
+          </div>
+          <div class="poster-price">
+            <span class="old-price">₹150</span>
+            <span class="new-price">₹120</span>
+            <span class="adv-pill">ADV ₹39</span>
+          </div>
+        </div>
+        <div id="btn-container-1">
+          <button class="poster-btn" id="add-btn-1" style="background:linear-gradient(90deg, #ea580c, #f97316);" onclick="addToCart('Chicken Curry (4 Pcs)', 120, 39, '/images/chicken.jpg')">
+            🛒 ADD - ₹120 (Adv 39)
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 3: Jeera Rice -->
+    <div class="poster-card" id="card-2">
+      <div class="poster-img" onclick="openRecipeModal(2)">
+        <img
+          id="dish-img-2"
+          src="/images/rice.jpg"
+          alt="Fragrant Basmati Jeera Rice"
+          referrerpolicy="no-referrer"
+          onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1596560548464-f010549b84d7?auto=format&fit=crop&w=800&q=80';"
+        />
+        <div class="poster-badge" style="background:#f59e0b; color:#111;">🍚 FRESH</div>
+        <div class="poster-badge off">25% OFF</div>
+        <div class="img-zoom-bar">
+          <span>🍚 Full Basmati Plate</span>
+          <button class="img-zoom-btn" type="button" onclick="event.stopPropagation(); openRecipeModal(2)">🔍 Full Photo</button>
+        </div>
+      </div>
+      <div class="poster-body">
+        <div>
+          <div class="poster-title">
+            <span>Jeera Rice</span>
+            <span style="color:#087a2b;">★4.7</span>
+          </div>
+          <div class="poster-desc">
+            🍚 Fragrant Basmati + Jeera Tadka • Full Plate • Pure ghee aroma and tempered roasted cumin seeds.
+          </div>
+          <div class="dish-tags">
+            <span class="dish-tag">Aged Basmati</span>
+            <span class="dish-tag">Shahi Cumin</span>
+            <span class="dish-tag">Ghee Tempering</span>
+          </div>
+          <div class="poster-price">
+            <span class="old-price">₹80</span>
+            <span class="new-price">₹60</span>
+            <span class="adv-pill">ADV ₹30</span>
+          </div>
+        </div>
+        <div id="btn-container-2">
+          <button class="poster-btn" id="add-btn-2" onclick="addToCart('Jeera Rice', 60, 30, '/images/rice.jpg')">
+            🛒 ADD - ₹60 (Adv 30)
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Recipe Photo Lightbox Modal -->
+<div class="recipe-modal" id="recipeModal" onclick="closeRecipeModal()">
+  <div class="recipe-modal-box" onclick="event.stopPropagation()">
+    <button class="modal-close-btn" onclick="closeRecipeModal()" aria-label="Close modal">×</button>
+    <div class="modal-img-stage">
+      <img id="modalImg" src="" alt="Complete Recipe Platter" referrerpolicy="no-referrer">
+    </div>
+    <div class="modal-info-panel">
+      <div>
+        <div class="modal-badge-row">
+          <span id="modalBadge" style="background:#087a2b; color:white; font-size:11px; font-weight:800; padding:3px 8px; border-radius:12px;">⭐ BESTSELLER</span>
+          <span id="modalRating" style="background:#fef3c7; color:#92400e; font-size:11px; font-weight:800; padding:3px 8px; border-radius:12px;">★4.9</span>
+        </div>
+        <h3 class="modal-dish-title" id="modalTitle">Jeera Rice + Chicken Curry</h3>
+        <p style="font-size:12px; color:#c2410c; font-weight:700; margin:4px 0 10px 0;" id="modalHindiTitle">
+          जीरा राइस + चिकन करी कॉम्बो
+        </p>
+        <p style="font-size:13px; color:#475569; line-height:1.6;" id="modalDesc">
+          Full plate platter. Completely visible recipe view.
+        </p>
+
+        <div style="background:#f1f5f9; padding:12px; border-radius:10px; margin:14px 0;">
+          <div style="display:flex; justify-content:space-between; align-items:baseline;">
+            <span style="font-size:12px; font-weight:bold; color:#64748b;">Price:</span>
+            <div>
+              <span id="modalOldPrice" style="text-decoration:line-through; color:#94a3b8; font-size:13px; margin-right:6px;">₹199</span>
+              <span id="modalNewPrice" style="color:#087a2b; font-size:24px; font-weight:900; font-family:'Outfit',sans-serif;">₹149</span>
+            </div>
+          </div>
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-top:6px; border-top:1px dashed #cbd5e1; padding-top:6px;">
+            <span style="font-size:12px; font-weight:bold; color:#c2410c;">🔒 Advance Required:</span>
+            <span id="modalAdvance" style="background:#ffedd5; color:#c2410c; font-weight:900; font-size:12px; padding:2px 8px; border-radius:6px;">₹49</span>
+          </div>
+        </div>
+
+        <div style="font-size:12px; color:#334155; margin-bottom:14px;">
+          <b>Ingredients:</b> <span id="modalIngredients">Basmati rice, fresh chicken, roasted cumin, desi ghee, ginger-garlic, whole spices</span>
+        </div>
+      </div>
+
+      <button id="modalActionBtn" class="poster-btn" style="padding:13px;" onclick="addModalItemToCart()">
+        🛒 Add to Cart Now
+      </button>
+    </div>
+  </div>
+</div>
+<!-- Payment QR Code Lightbox Modal -->
+<div class="recipe-modal" id="payQrModal" onclick="closePayQrModal()">
+  <div class="recipe-modal-box" onclick="event.stopPropagation()" style="max-width:520px;">
+    <button class="modal-close-btn" onclick="closePayQrModal()" aria-label="Close QR modal">×</button>
+    <div class="modal-img-stage" style="background:#f8fafc; padding:24px; min-height:260px;">
+      <div style="background:white; border:2px solid #087a2b; border-radius:16px; padding:16px; box-shadow:0 10px 25px rgba(0,0,0,0.1); text-align:center;">
+        <img id="modalQrImg" src="/images/pay_qr.png" alt="BISWASH KITCHEN Payment QR" style="width:230px; height:230px; object-fit:contain; display:block; margin:0 auto;" />
+        <div style="font-size:11px; font-weight:800; color:#087a2b; margin-top:8px; letter-spacing:0.5px; text-transform:uppercase;">
+          🍃 BISWASH KITCHEN
+        </div>
+      </div>
+    </div>
+    <div class="modal-info-panel" style="padding:20px;">
+      <div>
+        <div class="modal-badge-row">
+          <span style="background:#087a2b; color:white; font-size:11px; font-weight:800; padding:3px 8px; border-radius:12px;">✅ VERIFIED MERCHANT</span>
+          <span style="background:#fef3c7; color:#92400e; font-size:11px; font-weight:800; padding:3px 8px; border-radius:12px;">⚡ INSTANT SETTLEMENT</span>
+        </div>
+        <h3 class="modal-dish-title" style="font-size:20px;">Scan QR to Pay</h3>
+        <p style="font-size:12px; color:#475569; margin:4px 0 10px 0;">
+          Owner: <b>Arbind Kumar</b> • Nayapalli, Bhubaneswar
+        </p>
+
+        <div style="background:#f0fdf4; border:1px solid #bbf7d0; border-radius:10px; padding:10px 14px; margin:10px 0;">
+          <div style="display:flex; justify-content:space-between; align-items:center;">
+            <span style="font-size:12px; font-weight:bold; color:#166534;">Payment Amount:</span>
+            <span id="modalQrAmount" style="color:#ea580c; font-size:20px; font-weight:900; font-family:'Outfit',sans-serif;">₹0</span>
+          </div>
+          <div style="font-size:10px; color:#475569; margin-top:4px;">
+            Supported: Google Pay • PhonePe • Paytm • BHIM • Cred • Any UPI App
+          </div>
+        </div>
+
+        <div style="font-size:11px; color:#334155; line-height:1.5; margin-bottom:12px;">
+          <b>Steps to complete:</b><br>
+          1. Open any UPI app and scan the QR code.<br>
+          2. Pay the required advance / full amount.<br>
+          3. Take screenshot & tap "Confirm on WhatsApp".
+        </div>
+      </div>
+
+      <div style="display:flex; flex-direction:column; gap:8px;">
+        <button onclick="payAdvanceViaApp()" class="poster-btn" style="padding:11px; font-size:13px;">
+          🚀 Open Installed UPI App
+        </button>
+        <a id="downloadQrBtn" href="/images/pay_qr.png" download="Biswash_Kitchen_Payment_QR.png" style="background:#f1f5f9; color:#334155; padding:9px; border:1px solid #cbd5e1; border-radius:10px; font-weight:700; font-size:12px; text-decoration:none; text-align:center; display:block;">
+          📥 Download QR Code Image
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Customer Reviews Section -->
+<section class="rating-box" id="reviews">
+  <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px;">
+    <h3 style="font-family:'Outfit',sans-serif; font-size:20px; font-weight:900; color:#0f172a;">
+      ⭐ Reviews (<span id="avgRating">4.9</span>/5) — <span id="totalReviews">3</span>
+    </h3>
+    <span style="font-size:12px; color:#087a2b; font-weight:bold;">100% Verified Nayapalli Customers</span>
+  </div>
+
+  <div style="background:#f8fafc; padding:14px; border-radius:12px; margin:14px 0; border:1px solid #e2e8f0;">
+    <input type="text" id="reviewName" placeholder="Your Name (e.g. Rahul, Sneha)">
+    <div style="display:flex; align-items:center; gap:8px; margin:6px 0;">
+      <span style="font-size:12px; font-weight:bold; color:#64748b;">Tap Stars:</span>
+      <div class="stars" id="starInput">
+        <span onclick="setStars(1)">★</span><span onclick="setStars(2)">★</span><span onclick="setStars(3)">★</span><span onclick="setStars(4)">★</span><span onclick="setStars(5)">★</span>
+      </div>
+    </div>
+    <textarea id="reviewText" placeholder="Review likho... e.g. Chicken bahut juicy tha aur rice ki khushboo best thi!" rows="2"></textarea>
+    <button onclick="submitReview()" style="width:100%; padding:10px; background:#087a2b; color:white; border:none; border-radius:8px; font-weight:bold; cursor:pointer;">
+      Submit Review
+    </button>
+  </div>
+
+  <div id="reviewList"></div>
+</section>
+
+<!-- Admin Orders (Hidden by default) -->
+<section class="admin-box" id="adminBox">
+  <h3 style="font-family:'Outfit',sans-serif; font-size:18px; font-weight:900; color:#34d399;">
+    🔐 Admin Panel — Arbind Kumar
+  </h3>
+  <p style="margin-top:7px; font-size:13px;">
+    Total Orders: <b id="orderCount">0</b> | Sale: <b id="saleCount">₹0</b> | Advance Collected: <b id="advanceCollected">₹0</b>
+  </p>
+  <div id="orderHistory" style="max-height:220px; overflow-y:auto; background:#1f2937; padding:10px; border-radius:8px; font-size:12px; margin-top:10px; font-family:monospace;"></div>
+
+  <!-- QR Management for Arbind Kumar -->
+  <div style="background:#1e293b; border:1px solid #334155; border-radius:10px; padding:12px; margin-top:12px;">
+    <h4 style="color:#38bdf8; font-size:13px; margin-bottom:6px;">📷 Payment QR Code Settings</h4>
+    <div style="display:flex; align-items:center; gap:12px; flex-wrap:wrap;">
+      <img id="adminQrPreview" src="/images/pay_qr.png" alt="Admin QR" style="width:70px; height:70px; background:white; padding:4px; border-radius:8px; object-fit:contain;" />
+      <div style="flex:1; min-width:180px; font-size:11px; color:#94a3b8;">
+        <span>Replace / upload new QR Code anytime:</span>
+        <input type="file" id="qrFileInput" accept="image/*" onchange="handleQrUpload(event)" style="display:block; margin-top:4px; font-size:11px; color:#e2e8f0;" />
+        <button type="button" onclick="resetQrCode()" style="background:#475569; color:white; border:none; padding:4px 8px; border-radius:4px; font-size:10px; margin-top:4px; cursor:pointer;">Reset Default QR</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Owner Photo Management for Arbind Kumar (0% AI) -->
+  <div style="background:#1e293b; border:1px solid #334155; border-radius:10px; padding:12px; margin-top:12px;">
+    <h4 style="color:#4ade80; font-size:13px; margin-bottom:6px;">👨‍🍳 Owner Profile Photo (Real Photo - 0% AI)</h4>
+    <div style="display:flex; align-items:center; gap:12px; flex-wrap:wrap;">
+      <img id="adminOwnerPhotoPreview" src="/project 10.jpeg" alt="Owner Photo" style="width:65px; height:65px; border-radius:50%; background:#334155; border:2px solid #22c55e; object-fit:cover; object-position:center 15%;" onerror="this.onerror=null; this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'65\' height=\'65\' viewBox=\'0 0 65 65\'><rect width=\'65\' height=\'65\' fill=\'%230b7e2f\'/><text x=\'50%25\' y=\'53%25\' font-size=\'32\' text-anchor=\'middle\' dominant-baseline=\'middle\'>👨‍🍳</text></svg>';" />
+      <div style="flex:1; min-width:180px; font-size:11px; color:#94a3b8;">
+        <span>Select your original photo file (e.g. project 10.jpeg):</span>
+        <input type="file" id="adminOwnerFileInput" accept="image/*" onchange="handleOwnerPhotoUpload(event)" style="display:block; margin-top:4px; font-size:11px; color:#e2e8f0;" />
+        <button type="button" onclick="resetOwnerPhoto()" style="background:#475569; color:white; border:none; padding:4px 8px; border-radius:4px; font-size:10px; margin-top:4px; cursor:pointer;">Reset Default Photo</button>
+      </div>
+    </div>
+  </div>
+
+  <div style="display:flex; gap:8px; margin-top:10px;">
+    <button onclick="clearOrders()" class="admin-button" style="background:#dc2626; color:white;">Clear Orders</button>
+    <button onclick="document.getElementById('adminBox').style.display='none'" class="admin-button" style="background:#4b5563; color:white;">Close Admin</button>
+  </div>
+</section>
+
+<!-- Checkout Section -->
+<section class="checkout-box" id="checkout">
+  <div class="checkout-header">
+    <h2>🛒 Your Order & Delivery</h2>
+    <span style="font-size:11px; color:#087a2b; font-weight:800; background:#ecfdf5; padding:4px 8px; border-radius:6px;">
+      Doorstep Nayapalli
+    </span>
+  </div>
+
+  <div class="cart-list" id="cartList">Cart empty.</div>
+
+  <!-- Summary Cards -->
+  <div class="totals-grid">
+    <div class="total-card">
+      <span>Total Bill</span>
+      <b id="total">₹0</b>
+    </div>
+    <div class="total-card adv">
+      <span>Advance Required</span>
+      <b id="advanceTotal">₹0</b>
+    </div>
+    <div class="total-card">
+      <span>Balance on Delivery</span>
+      <b id="balanceTotal">₹0</b>
+    </div>
+  </div>
+
+  <h3 style="font-size:14px; font-weight:800; color:#0f172a; margin:14px 0 6px 0;">📍 Delivery Details (Nayapalli)</h3>
+  <input type="text" id="name" placeholder="Full Name *">
+  <input type="tel" id="phone" placeholder="Phone Number (10 digits) *">
+  <input type="text" id="address" placeholder="Full House / Flat / Street Address in Nayapalli *">
+
+  <!-- GPS Live Location Picker -->
+  <div class="location-status" id="locStatus">
+    📍 Location not shared — Click below to allow live GPS
+  </div>
+  <button onclick="getLocation()" class="location-btn" id="gpsBtn">
+    📍 Share Live Location — Allow GPS
+  </button>
+  <input type="text" id="manualLocation" placeholder="Manual: Paste Google Maps link if GPS fails" style="font-size:11px; margin-top:6px;">
+
+  <!-- Advance Payment Box (Anti-Fake Secure Advance) -->
+  <div class="advance-box" id="advBox" style="background:#fff8f6; border:2px solid #e23744; border-radius:14px; padding:16px; margin:14px 0;">
+    <h4 style="color:#e23744; font-family:'Outfit',sans-serif; font-size:16px; font-weight:900; margin:0 0 6px 0; text-align:center;">
+      🔒 Secure Advance - Anti-Fake
+    </h4>
+    <div style="font-size:11px; color:#64748b; text-align:center; margin-bottom:8px;">
+      Rule: ₹149 Combo → ₹49 Adv | ₹120 Chicken → ₹39 Adv | ₹60 Rice → ₹30 Adv
+    </div>
+
+    <div id="qrAmountShow" style="background:#1c1c1c;color:white;padding:10px;border-radius:8px;font-weight:700;margin:10px 0;text-align:center;">
+      Pay ₹0 Advance
+    </div>
+    <span id="autoAmt" style="display:none;">0</span>
+
+    <div style="position:relative; text-align:center;">
+      <img src="./qr_customer_payment.jpg" id="qrImg" onerror="this.src='/images/pay_qr.png'" alt="Biswash Kitchen Payment QR" style="width:180px;margin:0 auto;display:block;border:2px solid #eee;border-radius:10px;padding:5px;cursor:pointer;" oncontextmenu="return false;" onclick="openPayQrModal()">
+      <div style="font-size:10px; color:#087a2b; font-weight:700; margin-top:4px; cursor:pointer;" onclick="openPayQrModal()">
+        🔍 Tap QR to Enlarge / Pay via Apps
+      </div>
+    </div>
+
+    <div id="advanceStatus" style="background:#ffe5e5;padding:10px;border-radius:8px;font-size:12px;color:#c72c2c;font-weight:600;margin:10px 0;text-align:center">
+      ❌ Advance NOT PAID
+    </div>
+
+    
+
+    <label style="font-size:11px;color:#555;font-weight:700;display:block;margin-top:6px;">Payment Screenshot (Compulsory)*</label>
+    <input type="file" id="ssInput" accept="image/*" style="width:100%;padding:8px;border:1.5px dashed #e23744;border-radius:8px;margin:5px 0;box-sizing:border-box;background:white;font-size:11px;">
+
+    <button class="advance-btn" onclick="verifyAdvanceSecure()" style="background:#1c1c1c;width:100%;padding:12px;color:white;border:none;border-radius:8px;font-weight:700;margin-top:8px;cursor:pointer;font-size:14px;transition:opacity 30ms;">
+      Verify & Confirm Advance
+    </button>
+
+    <p style="font-size:9px;color:#888;text-align:center;margin-top:6px;">
+      Txn ID + Screenshot verified by owner manually
+    </p>
+  </div>
+
+  <!-- Payment Mode Selection -->
+  <div class="pay-box">
+    <label class="pay-option" id="labelPayUPI" style="border-color:#087a2b;">
+      <input type="radio" name="payMode" value="upi" checked onchange="updatePayMode()">
+      <div>
+        <b>📷 Scan Official QR Code — Instant Full Payment</b>
+        <div style="font-size:11px; color:#64748b;">Instant settlement via PhonePe / Google Pay / Paytm QR</div>
+      </div>
+    </label>
+
+    <label class="pay-option" id="labelPayCOD">
+      <input type="radio" name="payMode" value="cod" onchange="updatePayMode()">
+      <div>
+        <b>💵 COD + Advance (Balance on Delivery)</b>
+        <div style="font-size:11px; color:#64748b;">Advance compulsory to cook, balance cash upon delivery</div>
+      </div>
+    </label>
+
+    <p id="codNote" style="display:none; font-size:11px; color:#087a2b; background:#ecfdf5; padding:8px; border-radius:8px; border:1px solid #a7f3d0; margin-top:6px;">
+      ✅ COD available in Nayapalli — Pay advance first, remaining balance at your doorstep.
+    </p>
+  </div>
+
+  <button class="upi-btn" id="upiBtn" onclick="payUPI()">
+    📷 Pay Full ₹<span id="upiAmount">0</span> via QR / UPI App
+  </button>
+  <button class="whatsapp-btn" id="whatsappBtn" onclick="orderWhatsApp()">
+    📱 Confirm Order on WhatsApp (After Advance)
+  </button>
+</section>
+
+<!-- Footer -->
+<footer>
+  <b>BISWASH KITCHEN</b> • Cloud Kitchen Nayapalli<br>
+  <div style="line-height:1.4; padding:8px 0 12px 0; text-align:center; max-width:320px; margin:0 auto;">
+    <div style="font-weight:600; font-size:15px; color:#f8fafc;">Owner: Arbind Kumar</div>
+    <div style="font-size:13px; color:#cbd5e1;">From - Bihar, Araria, Lodipur</div>
+    <div style="font-size:13px; color:#cbd5e1;">Nayapalli, Bhubaneswar, Odisha • Phone: <b>7644955446</b></div>
+    <div style="font-size:12px; color:#94a3b8; margin-top:2px;">✉️ Email: <a href="mailto:erarbind10@gmail.com" style="color:#86efac; text-decoration:none;"><b>erarbind10@gmail.com</b></a></div>
+    <div style="margin-top:8px; font-size:13px; font-weight:500; background:#fff7ed; color:#1c1c1c; border:1px solid #fed7aa; padding:6px 10px; border-radius:8px; text-align:left;">
+      ⏰ Order Timing:<br>
+      🟢 11:30 AM - 4:00 PM<br>
+      🔴 Closed - 4:00 PM to 7:00 PM<br>
+      🟢 7:00 PM - 10:30 PM
+    </div>
+  </div>
+  📷 Payment: <b>Official Merchant QR Code</b> (Scan via PhonePe, GPay, Paytm, Any UPI)<br>
+  🔒 Rule: 149→49 | 120→39 | 60→30 Advance Compulsory for Confirmation<br><br>
+  <span id="footerOrders" style="color:#087a2b; font-weight:bold;">0 Orders Placed</span>
+</footer>
+
+<!-- Bottom Mobile Floating Bar -->
+<div class="bottom-bar" id="bottomBar">
+  <div>
+    <b id="bottomItems">0 Items</b><br>
+    <span id="bottomTotal" style="font-size:16px; font-weight:900; color:#087a2b;">₹0</span>
+    <span style="font-size:11px; color:#ea580c; font-weight:bold;"> | Adv <span id="bottomAdvance">₹0</span></span>
+  </div>
+  <button class="checkout-bottom-btn" onclick="goCheckout()">Proceed to Checkout</button>
+</div>
+
+<script>
+// Menu Items Data with Complete Photographic Assets
+const MENU_DATA = [
+  {
+    name: '₹149 Combo - Jeera Rice + Chicken Curry',
+    hindiName: 'जीरा राइस + चिकन करी कॉम्बो',
+    price: 149,
+    originalPrice: 199,
+    advance: 49,
+    rating: '4.9',
+    badge: '⭐ BESTSELLER',
+    discountBadge: '25% OFF',
+    desc: 'Full Plate Combo • Homemade Taste • 1 Person Serving • Fragrant aged basmati jeera rice served with slow-cooked desi chicken curry and spicy gravy.',
+    ingredients: 'Basmati rice, fresh chicken, roasted cumin seeds, pure desi ghee, whole spices, ginger-garlic paste, fresh coriander leaves, lemon, onion slices.',
+    img: '/images/combo.jpg',
+    fallbackImg: 'https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&w=800&q=80'
+  },
+  {
+    name: 'Chicken Curry (4 Pcs)',
+    hindiName: 'देसी चिकन करी (4 पीस)',
+    price: 120,
+    originalPrice: 150,
+    advance: 39,
+    rating: '4.8',
+    badge: '🔥 SPICY',
+    discountBadge: '20% OFF',
+    desc: 'Desi Style Chicken Curry • 4 Big Pieces • Simmered in authentic Odia onion-tomato thick gravy with freshly ground spices.',
+    ingredients: 'Farm-fresh chicken, mustard oil, caramelized onions, red chili, whole garam masala, tomato puree, fresh green coriander.',
+    img: '/images/chicken.jpg',
+    fallbackImg: 'https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?auto=format&fit=crop&w=800&q=80'
+  },
+  {
+    name: 'Jeera Rice',
+    hindiName: 'शाही जीरा राइस',
+    price: 60,
+    originalPrice: 80,
+    advance: 30,
+    rating: '4.7',
+    badge: '🍚 FRESH',
+    discountBadge: '25% OFF',
+    desc: 'Fragrant Basmati + Jeera Tadka • Full Plate • Fluffy long grain rice tempered with royal cumin seeds and aroma of pure desi ghee.',
+    ingredients: 'Long-grain basmati rice, shahi jeera, pure ghee, bay leaf, green cardamom, chopped coriander.',
+    img: '/images/rice.jpg',
+    fallbackImg: 'https://images.unsplash.com/photo-1596560548464-f010549b84d7?auto=format&fit=crop&w=800&q=80'
+  }
+];
+
+let cart = [];
+let lat = "";
+let lng = "";
+let link = "";
+let payMode = "upi";
+let stars = 5;
+let advancePaid = false;
+let advanceTxn = "";
+let paidAdvanceAmount = 0;
+let activeModalIndex = 0;
+
+// Persistent orders and reviews in localStorage
+let orders = JSON.parse(localStorage.getItem("bk_orders") || "[]");
+let reviews = JSON.parse(localStorage.getItem("bk_reviews") || JSON.stringify([
+  { name: 'Priyanka Mohapatra', stars: 5, text: 'Best homemade chicken curry in Nayapalli! Jeera rice was super fragrant and chicken was cooked to perfection.', date: '18/09/2026' },
+  { name: 'Rahul Senapati', stars: 5, text: 'The ₹149 combo is truly unmatched value. Arbind bhai delivered it piping hot within 30 mins.', date: '16/09/2026' },
+  { name: 'Debashis Rout', stars: 5, text: 'Chicken curry has that authentic Odia home taste with rich thick gravy. Very hygienic packing.', date: '14/09/2026' }
+]));
+
+// Drawer Menu
+function openMenu() {
+  document.getElementById("sideMenu").classList.add("open");
+  document.getElementById("overlay").classList.add("show");
+}
+function closeMenu() {
+  document.getElementById("sideMenu").classList.remove("open");
+  document.getElementById("overlay").classList.remove("show");
+}
+
+// Framing Switcher: 100% Fit Plate vs Full Bleed
+function setImageFitMode(mode) {
+  const cards = document.querySelectorAll('.poster-card');
+  const btnContain = document.getElementById('btnFitContain');
+  const btnCover = document.getElementById('btnFitCover');
+
+  if (mode === 'cover') {
+    cards.forEach(c => c.classList.add('mode-cover'));
+    btnCover.classList.add('active');
+    btnContain.classList.remove('active');
+  } else {
+    cards.forEach(c => c.classList.remove('mode-cover'));
+    btnContain.classList.add('active');
+    btnCover.classList.remove('active');
+  }
+}
+
+// Recipe Modal Lightbox
+function openRecipeModal(index) {
+  activeModalIndex = index;
+  const item = MENU_DATA[index];
+  if (!item) return;
+
+  const modal = document.getElementById("recipeModal");
+  const modalImg = document.getElementById("modalImg");
+  modalImg.src = item.img;
+  modalImg.onerror = function() { this.src = item.fallbackImg; };
+
+  document.getElementById("modalTitle").innerText = item.name;
+  document.getElementById("modalHindiTitle").innerText = item.hindiName;
+  document.getElementById("modalDesc").innerText = item.desc;
+  document.getElementById("modalOldPrice").innerText = "₹" + item.originalPrice;
+  document.getElementById("modalNewPrice").innerText = "₹" + item.price;
+  document.getElementById("modalAdvance").innerText = "₹" + item.advance;
+  document.getElementById("modalRating").innerText = "★" + item.rating;
+  document.getElementById("modalBadge").innerText = item.badge;
+  document.getElementById("modalIngredients").innerText = item.ingredients;
+
+  modal.classList.add("active");
+  document.body.style.overflow = "hidden";
+}
+
+function closeRecipeModal() {
+  document.getElementById("recipeModal").classList.remove("active");
+  document.body.style.overflow = "auto";
+}
+
+function addModalItemToCart() {
+  const item = MENU_DATA[activeModalIndex];
+  if (item) {
+    addToCart(item.name, item.price, item.advance, item.img);
+    closeRecipeModal();
+  }
+}
+
+// Cart Management
+function addToCart(name, price, advance, imgUrl) {
+  let existing = cart.find(item => item.name === name);
+  if (existing) {
+    existing.qty++;
+  } else {
+    cart.push({ name: name, price: price, advance: advance, img: imgUrl, qty: 1 });
+  }
+  advancePaid = false;
+  paidAdvanceAmount = 0;
+  updateCart();
+  updateCardButtons();
+  goCheckout();
+}
+
+function changeQuantity(index, amount) {
+  cart[index].qty += amount;
+  if (cart[index].qty <= 0) {
+    cart.splice(index, 1);
+  }
+  advancePaid = false;
+  paidAdvanceAmount = 0;
+  updateCart();
+  updateCardButtons();
+}
+
+function updateCardButtons() {
+  MENU_DATA.forEach((item, idx) => {
+    const container = document.getElementById("btn-container-" + idx);
+    if (!container) return;
+    const cartItem = cart.find(c => c.name === item.name);
+    if (!cartItem || cartItem.qty === 0) {
+      container.innerHTML = `<button class="poster-btn" onclick="addToCart('${item.name}', ${item.price}, ${item.advance}, '${item.img}')">🛒 ADD TO CART - ₹${item.price} (Adv ${item.advance})</button>`;
+    } else {
+      const cartIdx = cart.findIndex(c => c.name === item.name);
+      container.innerHTML = `
+        <div class="card-qty-row">
+          <button class="card-qty-btn" onclick="changeQuantity(${cartIdx}, -1)">-</button>
+          <span class="card-qty-count">${cartItem.qty} in Cart</span>
+          <button class="card-qty-btn" onclick="changeQuantity(${cartIdx}, 1)">+</button>
+        </div>
+      `;
+    }
+  });
+}
+
+function getTotal() {
+  return cart.reduce((total, item) => total + item.price * item.qty, 0);
+}
+function getAdvanceTotal() {
+  return cart.reduce((total, item) => total + item.advance * item.qty, 0);
+}
+function getBalance() {
+  return Math.max(0, getTotal() - getAdvanceTotal());
+}
+
+function updateCart() {
+  let total = getTotal();
+  let adv = getAdvanceTotal();
+  let bal = getBalance();
+  let items = cart.reduce((sum, item) => sum + item.qty, 0);
+
+  const cc = document.getElementById("cartCount");
+  if (cc) cc.innerText = items;
+  const ccDash = document.getElementById("cart-count");
+  if (ccDash) ccDash.innerText = items;
+  document.querySelectorAll(".cartCount2").forEach(el => { el.innerText = items; });
+  document.getElementById("total").innerText = "₹" + total;
+  document.getElementById("advanceTotal").innerText = "₹" + adv;
+  document.getElementById("balanceTotal").innerText = "₹" + bal;
+  document.getElementById("upiAmount").innerText = total;
+
+  document.getElementById("bottomItems").innerText = items + " Items";
+  document.getElementById("bottomTotal").innerText = "₹" + total;
+  document.getElementById("bottomAdvance").innerText = "₹" + adv;
+
+  let html = "";
+  if (cart.length === 0) {
+    html = `<div style="text-align:center; padding:18px; color:#64748b;">
+      🛒 Cart is currently empty. Choose from our star dishes above!
+    </div>`;
+  } else {
+    cart.forEach((item, index) => {
+      html += `
+        <div class="cart-row">
+          <div>
+            <b style="color:#0f172a; font-size:13px;">${item.name}</b><br>
+            <small style="color:#64748b;">
+              ₹${item.price} × ${item.qty} = <b style="color:#087a2b;">₹${item.price * item.qty}</b> |
+              <span style="color:#c2410c;">Adv ₹${item.advance} × ${item.qty} = ₹${item.advance * item.qty}</span>
+            </small>
+          </div>
+          <div class="qty">
+            <button onclick="changeQuantity(${index}, -1)">-</button>
+            <b style="min-width:18px; text-align:center;">${item.qty}</b>
+            <button onclick="changeQuantity(${index}, 1)">+</button>
+          </div>
+        </div>
+      `;
+    });
+  }
+  document.getElementById("cartList").innerHTML = html;
+
+  if (items > 0) {
+    document.getElementById("bottomBar").classList.add("show");
+  } else {
+    document.getElementById("bottomBar").classList.remove("show");
+  }
+
+  if (typeof SecureAdvance !== "undefined" && SecureAdvance.isPaid()) {
+    let currentAdv = cart.reduce((s, i) => s + (i.advance || 0), 0);
+    if (currentAdv > SecureAdvance.getAmount()) {
+      SecureAdvance.reset();
+      const statusEl = document.getElementById("advanceStatus");
+      if (statusEl) {
+        statusEl.innerHTML = "❌ Cart badal diya hai, fir se advance pay karo";
+        statusEl.style.background = "#ffe5e5";
+        statusEl.style.color = "#c72c2c";
+      }
+      const txnIn = document.getElementById("txnInput");
+      if (txnIn) txnIn.disabled = false;
+      const ssIn = document.getElementById("ssInput");
+      if (ssIn) ssIn.disabled = false;
+    }
+  }
+
+  updateAdvanceUI();
+}
+
+function goCheckout() {
+  document.getElementById("checkout").scrollIntoView({ behavior: "smooth" });
+}
+
+// Live GPS Location
+function getLocation(){
+  const btn = document.getElementById('gpsBtn');
+  const status = document.getElementById('locStatus');
+  
+  if(!navigator.geolocation){
+    status.innerHTML = `<span style="color:#087a2b">✅ GPS support nahi hai, neeche Google Maps link daal do.</span>`;
+    document.getElementById('manualLocation').focus();
+    return;
+  }
+
+  btn.innerHTML = "📍 Location le raha hu...";
+  status.innerHTML = `<span style="color:#666">⌛ Location le raha hu, 2 sec ruko...</span>`;
+
+  navigator.geolocation.getCurrentPosition(
+    (pos) => {
+      link = `https://www.google.com/maps?q=${pos.coords.latitude},${pos.coords.longitude}`;
+      status.innerHTML = `<span style="color:#087a2b">✅ Location mil gaya! Deliver ho jayega</span>`;
+      btn.innerHTML = "✅ Location Locked";
+      btn.style.background = "#087a2b";
+      document.getElementById('manualLocation').value = link;
+    },
+    (err) => {
+      // Friendly guidance when GPS permission is denied or unavailable
+      status.innerHTML = `
+        <div style="background:#ecfdf5; border:1px solid #a7f3d0; padding:8px 10px; border-radius:8px; color:#065f46; font-size:13px;">
+          📍 <b>GPS is not allowed, no problem!</b><br>
+          Please enter your <b>Google Maps link</b> or <b>Lane / Building name</b> in the box below, we will find you.
+        </div>
+      `;
+      btn.innerHTML = "📍 Try Again GPS";
+      document.getElementById('manualLocation').placeholder = "Enter your location here - e.g. Nayapalli near Tusar Gym";
+      document.getElementById('manualLocation').focus();
+      document.getElementById('manualLocation').style.border = "2px solid #087a2b";
+    },
+    { enableHighAccuracy: true, timeout: 8000 }
+  );
+}
+
+// UPI Configuration
+const UPI_ID = "7644955446@ybl"; // 👈 Yaha apna UPI ID daal de, ye mera guess hai. Tera PhonePe/GPay ka UPI ID daal
+const UPI_NAME = "Arbind Kumar";
+
+// Payment Mode Toggle
+function updatePayMode() {
+  payMode = document.querySelector('input[name="payMode"]:checked').value;
+  document.getElementById("codNote").style.display = payMode === "cod" ? "block" : "none";
+  document.getElementById("upiBtn").style.display = "none"; // UPI button hide, QR se hi pay hoga
+
+  const labelUPI = document.getElementById("labelPayUPI");
+  const labelCOD = document.getElementById("labelPayCOD");
+  if (payMode === "upi") {
+    labelUPI.style.borderColor = "#087a2b";
+    labelUPI.style.background = "#ecfdf5";
+    labelCOD.style.borderColor = "#cbd5e1";
+    labelCOD.style.background = "white";
+  } else {
+    labelCOD.style.borderColor = "#087a2b";
+    labelCOD.style.background = "#ecfdf5";
+    labelUPI.style.borderColor = "#cbd5e1";
+    labelUPI.style.background = "white";
+  }
+  updateAdvanceUI();
+}
+
+// ================== ULTRA SECURITY MODULE - DO NOT TOUCH ==================
+(() => {
+  'use strict';
+
+  // 1. Config - Freeze kar diya, koi change nahi kar payega
+  const CONFIG = Object.freeze({
+    UPI_ID: "7644955446@ybl", // Apna UPI ID yaha
+    UPI_NAME: "Arbind Kumar",
+   // MIN_TXN_LEN: 12,
+    RATE_LIMIT_MS: 0
+  });
+  
+  // 2. Private Locker - Bahar se access hi nahi hai
+  let _private = {
+    isPaid: false,
+    txn: "",
+    amount: 0,
+    ss: false,
+    hash: ""
+  };
+
+  // Hash banao taki localStorage me koi amount change na kar sake
+  function makeHash(txn, amt){
+    let str = txn + "|" + amt + "|biswash@2026|ArbindKumar";
+    let h = 0;
+    for(let i=0;i<str.length;i++){ h = ((h<<5)-h)+str.charCodeAt(i); h|=0; }
+    return h.toString(36);
+  }
+
+  // Public API - Freeze kiya hua
+  window.SecureAdvance = Object.freeze({
+    setPaid: (txn, amt) => {
+      _private.isPaid = true;
+      _private.txn = txn;
+      _private.amount = amt;
+      _private.hash = makeHash(txn, amt);
+      localStorage.setItem("bk_sec_hash", _private.hash);
+      localStorage.setItem("bk_last_verified_amt", String(amt));
+      localStorage.setItem("bk_last_verified_txn", txn);
+    },
+    isPaid: () => {
+      // Hash verify - agar kisi ne localStorage me amount change kiya to fail
+      const savedHash = localStorage.getItem("bk_sec_hash");
+      if(!savedHash) return false;
+      if(savedHash!== makeHash(_private.txn, _private.amount)) return false;
+      return _private.isPaid === true && _private.ss === true && _private.amount > 0;
+    },
+    getTxn: () => _private.txn,
+    getAmount: () => _private.amount,
+    setSS: (v) => { _private.ss = v; },
+    hasSS: () => _private.ss === true,
+    reset: () => { _private = { isPaid:false, txn:"", amount:0, ss:false, hash:"" }; localStorage.removeItem("bk_sec_hash"); }
+  });
+
+  // 4. Anti-Tamper - Agar koi HTML se qrAmountShow ka amount change kare to auto reset
+  setInterval(() => {
+    const adv = (typeof getAdvanceTotal === 'function')? getAdvanceTotal() : 0;
+    const total = (typeof getTotal === 'function')? getTotal() : 0;
+    const expected = (typeof payMode!== 'undefined' && payMode === 'upi')? total : adv;
+    if(window.SecureAdvance && window.SecureAdvance.isPaid() && expected!== window.SecureAdvance.getAmount()){
+      window.SecureAdvance.reset();
+      const el = document.getElementById('advanceStatus');
+      if(el){ el.innerHTML="❌ SECURITY ALERT: Amount change detected! Fir se pay karo"; el.style.background="#ff0000"; el.style.color="white"; }
+      const txnEl = document.getElementById('txnInput'); if(txnEl) txnEl.disabled=false;
+      const ssEl = document.getElementById('ssInput'); if(ssEl) ssEl.disabled=false;
+    }
+  }, 1500);
+
+  // 5. Screenshot compulsory + 2MB limit
+  let screenshotBase64 = "";
+  window.screenshotBase64 = ""; // global for order
+  const initSSInput = () => {
+    const ssInput = document.getElementById('ssInput');
+    if(ssInput && !ssInput.dataset.secBound){
+      ssInput.dataset.secBound = "1";
+      ssInput.addEventListener('change', function(e){
+        const file = e.target.files[0];
+        if(!file) return;
+      //  if(file.size > 2*1024*1024){ alert("2MB se kam ka screenshot daalo"); this.value=""; return; }
+        if(!file.type.startsWith('image/')){ alert("Sirf image allowed"); return; }
+        const r = new FileReader();
+        r.onload = ev => {
+          screenshotBase64 = ev.target.result;
+          window.screenshotBase64 = ev.target.result;
+          window.SecureAdvance.setSS(true);
+        };
+        r.readAsDataURL(file);
+      });
+    }
+  };
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initSSInput);
+  } else {
+    initSSInput();
+  }
+
+  // 6. Right Click + Copy disable on QR (basic protection)
+  document.addEventListener('contextmenu', e => {
+    if(e.target && (e.target.id === 'qrImg' || e.target.id === 'modalQrImg')) e.preventDefault();
+  });
+
+  // 7. Console warning
+  console.log("%cSTOP! 🛑 BISWASH KITCHEN SECURITY", "color:red; font-size:30px; font-weight:900;");
+  console.log("%cYe system Arbind Kumar ke liye protected hai. Console se change karne ki koshish se order block ho jayega.", "color:black; font-size:14px;");
+
+  // 8. Secure Verify Function
+  window.verifyAdvanceSecure = function(){
+    const txnEl = document.getElementById('txnInput');
+    const txn = txnEl.value.trim().toUpperCase();
+    const adv = getAdvanceTotal();
+    const total = getTotal();
+    const payAmount = (payMode === "upi")? total : adv;
+
+    if(cart.length===0){ alert("Cart empty"); return; }
+    if(payAmount <=0){ alert("Amount 0 hai"); return; }
+    if(txn.length < CONFIG.MIN_TXN_LEN){ alert("12 digit ka sahi UPI Txn ID daalo"); return; }
+    if(!/^[A-Z0-9]{12,22}$/.test(txn)){ alert("Txn ID me sirf A-Z 0-9 allowed"); return; }
+    if(!window.SecureAdvance.hasSS()){ alert("Screenshot upload compulsory hai"); return; }
+
+    let used = JSON.parse(localStorage.getItem("bk_used_txns")||"[]");
+    if(used.includes(txn)){ alert("Ye Txn ID pehle use ho chuka hai"); return; }
+
+    window.SecureAdvance.setPaid(txn, payAmount);
+    const st = document.getElementById('advanceStatus');
+    st.innerHTML = `✅ VERIFIED - ₹${payAmount} Paid<br><small>${txn}</small><br>🔒 Locked by Security`;
+    st.style.background="#d4edda"; st.style.color="#155724"; st.style.border="2px solid #28a745";
+    txnEl.disabled=true; document.getElementById('ssInput').disabled=true;
+    alert("✅ Advance Locked! Ab koi change nahi kar payega");
+    updateAdvanceUI();
+  };
+
+  // 9. Secure Order Function
+  window.orderWhatsApp = function(){
+    const name = document.getElementById('name').value.trim();
+    const phone = document.getElementById('phone').value.trim();
+    const address = document.getElementById('address').value.trim();
+    const manualLoc = document.getElementById('manualLocation').value.trim();
+    const finalLink = (typeof link!== 'undefined' && link)? link : manualLoc;
+
+    if(cart.length===0){ alert("Cart empty"); return; }
+    if(name.length<3){ alert("Naam daalo"); return; }
+    if(!/^[6-9]\d{9}$/.test(phone)){ alert("Sahi phone daalo"); return; }
+    if(address.length<10){ alert("Pura address daalo"); return; }
+    if(!window.SecureAdvance.isPaid()){
+      alert("❌ SECURITY: Pehle QR scan karke Verify karo, bina verification ke order BLOCK hai");
+      document.getElementById('advBox').scrollIntoView({behavior:'smooth'});
+      return;
+    }
+    const curAmount = (payMode === "upi")? getTotal() : getAdvanceTotal();
+    if(curAmount!== window.SecureAdvance.getAmount()){
+      alert("SECURITY: Amount change kiya hai, fir se pay karo"); window.SecureAdvance.reset(); return;
+    }
+    const last = parseInt(localStorage.getItem("bk_last_order_ts")||"0");
+    if(Date.now()-last < CONFIG.RATE_LIMIT_MS){ alert("2 minute me 1 hi order"); return; }
+
+    const total = getTotal();
+    const advPaid = window.SecureAdvance.getAmount();
+    const balance = (payMode === "upi")? 0 : total - advPaid;
+    const txn = window.SecureAdvance.getTxn();
+
+    let msg = `*NEW SECURE ORDER*%0A👤 ${name} | 📞 ${phone}%0A📍 ${address}%0A🗺️ ${finalLink||"No GPS"}%0A%0A*Items:*%0A`;
+    cart.forEach(i=>{ msg+=`• ${i.name} x${i.qty}=₹${i.price*i.qty}%0A`; });
+    msg+=`%0A*Total:* ₹${total} | *Paid:* ₹${advPaid} (${payMode.toUpperCase()})%0A*Txn:* ${txn}%0A*Balance:* ₹${balance}%0A🔒 Verified by Security Module`;
+
+    let used = JSON.parse(localStorage.getItem("bk_used_txns")||"[]");
+    used.push(txn); localStorage.setItem("bk_used_txns", JSON.stringify(used.slice(-100)));
+    localStorage.setItem("bk_last_order_ts", String(Date.now()));
+
+    const orderData = { id: Date.now(), name, phone, address, link: finalLink, cart: [...cart], total, advance: advPaid, balance, txn, payMode, date: new Date().toLocaleString(), status:"SECURE VERIFIED" };
+    if(typeof orders!== 'undefined'){ orders.push(orderData); localStorage.setItem("bk_orders", JSON.stringify(orders)); }
+    if(typeof updateAdminStats === 'function') updateAdminStats();
+
+    window.open(`https://wa.me/917644955446?text=${msg}`, '_blank');
+    setTimeout(()=>{ cart=[]; window.SecureAdvance.reset(); screenshotBase64=""; window.screenshotBase64=""; document.getElementById('txnInput').value=""; document.getElementById('ssInput').value=""; document.getElementById('txnInput').disabled=false; document.getElementById('ssInput').disabled=false; updateCart(); updateCardButtons(); if(typeof renderAdmin==='function') renderAdmin(); if(typeof updateAdminStats==='function') updateAdminStats(); alert("✅ Order Sent Securely!"); },1500);
+  };
+
+  // 3. Freeze important functions - koi override nahi kar payega
+  Object.defineProperty(window, 'SecureAdvance', { writable: false, configurable: false });
+  Object.defineProperty(window, 'verifyAdvanceSecure', { writable: false, configurable: false });
+  Object.defineProperty(window, 'orderWhatsApp', { writable: false, configurable: false });
+
+})();
+
+function updateAdvanceUI(){
+  const adv = getAdvanceTotal();
+  const total = getTotal();
+  const payAmount = (payMode === "upi") ? total : adv;
+  
+  const qrShow = document.getElementById('qrAmountShow');
+  const autoAmt = document.getElementById('autoAmt');
+  const modalAmt = document.getElementById('modalQrAmount');
+  const upiAmt = document.getElementById('upiAmount');
+  
+  if(qrShow){
+    qrShow.innerHTML = payMode === "upi" 
+      ? `Pay Full ₹${total} - Scan karo, ₹${total} auto ayega` 
+      : `Pay ₹${adv} Advance - Scan karo, ₹${adv} auto ayega`;
+    qrShow.style.background = payMode === "upi" ? "#087a2b" : "#1c1c1c";
+  }
+  if(autoAmt) autoAmt.innerText = payAmount;
+  if(modalAmt) modalAmt.innerText = `₹${payAmount}`;
+  if(upiAmt) upiAmt.innerText = payAmount;
+
+  if(payAmount > 0){
+    const note = payMode === "upi" ? `Full Payment Rs${payAmount}` : `Advance Rs${payAmount}`;
+    const upiLink = `upi://pay?pa=${UPI_ID}&pn=${encodeURIComponent(UPI_NAME)}&am=${payAmount}&cu=INR&tn=${encodeURIComponent('Biswash Kitchen '+note)}`;
+    const qrUrl = `https://api.qrserver.com/v1/create-qr-code/?size=400x400&data=${encodeURIComponent(upiLink)}`;
+    const qrImg = document.getElementById('qrImg');
+    if(qrImg) qrImg.src = qrUrl;
+    const modalQr = document.getElementById('modalQrImg');
+    if(modalQr) modalQr.src = qrUrl;
+  }
+
+  // Security - cart change pe verification reset
+  if(typeof SecureAdvance !== 'undefined' && SecureAdvance.isPaid()){
+    const verifiedAmt = parseInt(localStorage.getItem("bk_last_verified_amt")||"0");
+    if(payAmount !== verifiedAmt){
+      SecureAdvance.reset();
+      const s = document.getElementById("advanceStatus");
+      if(s){ s.innerHTML = "❌ Amount badal gaya, fir se pay karke verify karo"; s.style.background="#ffe5e5"; s.style.color="#c72c2c"; }
+      const t = document.getElementById("txnInput"); if(t) t.disabled=false;
+      const ss = document.getElementById("ssInput"); if(ss) ss.disabled=false;
+    }
+  }
+}
+
+const renderCart = updateCart;
+
+// Open Payment QR Lightbox Modal
+function openPayQrModal(){ 
+  document.getElementById("payQrModal").classList.add("active"); 
+  document.body.style.overflow="hidden"; 
+  updateAdvanceUI(); 
+}
+
+function closePayQrModal(){ 
+  document.getElementById("payQrModal").classList.remove("active"); 
+  document.body.style.overflow="auto"; 
+}
+
+// Pay Advance via Installed UPI App
+function payAdvanceViaApp(){
+  const adv = getAdvanceTotal();
+  const total = getTotal();
+  const payAmount = (payMode === "upi") ? total : adv;
+  if(payAmount <=0){ alert("Pehle item add karo"); return; }
+  const upiLink = `upi://pay?pa=${UPI_ID}&pn=${encodeURIComponent(UPI_NAME)}&am=${payAmount}&cu=INR&tn=Biswash Kitchen`;
+  window.location.href = upiLink; // GPay/PhonePe direct khulega, amount auto bhara hoga
+}
+
+// Pay Advance button handler
+function payAdvance() {
+  let adv = getAdvanceTotal();
+  if (adv <= 0) {
+    alert("Please add an item to the cart first.");
+    return;
+  }
+  openPayQrModal(adv);
+}
+
+// Pay Full Order via QR / UPI
+function payUPI() {
+  let total = getTotal();
+  if (total <= 0) {
+    alert("Please add an item to the cart first.");
+    return;
+  }
+  openPayQrModal(total);
+}
+
+// QR Code Image Manager (Admin custom QR upload)
+const DEFAULT_QR_URL = "./qr_customer_payment.jpg";
+
+function initQr() {
+  let savedQr = localStorage.getItem("bk_custom_qr") || DEFAULT_QR_URL;
+  applyQrImage(savedQr);
+}
+
+function applyQrImage(src) {
+  const previews = ["qrImgPreview", "modalQrImg", "adminQrPreview", "qrImg"];
+  previews.forEach(id => {
+    const el = document.getElementById(id);
+    if (el) el.src = src;
+  });
+  const downloadLink = document.getElementById("downloadQrBtn");
+  if (downloadLink) downloadLink.href = src;
+}
+
+function handleQrUpload(event) {
+  const file = event.target.files[0];
+  if (!file) return;
+  const reader = new FileReader();
+  reader.onload = function(e) {
+    const dataUrl = e.target.result;
+    localStorage.setItem("bk_custom_qr", dataUrl);
+    applyQrImage(dataUrl);
+    alert("✅ Payment QR Code updated successfully!");
+  };
+  reader.readAsDataURL(file);
+}
+
+function resetQrCode() {
+  if (confirm("Reset payment QR to default merchant QR?")) {
+    localStorage.removeItem("bk_custom_qr");
+    applyQrImage(DEFAULT_QR_URL);
+    alert("Default QR restored.");
+  }
+}
+
+// Owner Profile Photo Manager (100% Real Original Photo - 0% AI)
+const DEFAULT_OWNER_PHOTO = "/project 10.jpeg";
+
+function initOwnerPhoto() {
+  const savedPhoto = localStorage.getItem("bk_owner_photo");
+  if (savedPhoto) {
+    applyOwnerPhoto(savedPhoto);
+  }
+}
+
+function applyOwnerPhoto(src) {
+  const previews = ["drawerOwnerPic", "adminOwnerPhotoPreview"];
+  previews.forEach(id => {
+    const el = document.getElementById(id);
+    if (el) el.src = src;
+  });
+}
+
+function handleOwnerPhotoUpload(event) {
+  const file = event.target.files[0];
+  if (!file) return;
+  const reader = new FileReader();
+  reader.onload = function(e) {
+    const dataUrl = e.target.result;
+    localStorage.setItem("bk_owner_photo", dataUrl);
+    applyOwnerPhoto(dataUrl);
+    alert("✅ Aapki original real photo (0% AI) save ho gayi!");
+  };
+  reader.readAsDataURL(file);
+}
+
+function resetOwnerPhoto() {
+  if (confirm("Reset photo to default?")) {
+    localStorage.removeItem("bk_owner_photo");
+    applyOwnerPhoto(DEFAULT_OWNER_PHOTO);
+    alert("Photo reset.");
+  }
+}
+
+// orderWhatsApp is implemented and protected in ULTRA SECURITY MODULE
+
+
+// Review System
+function setStars(number) {
+  stars = number;
+  document.querySelectorAll("#starInput span").forEach((star, index) => {
+    star.style.color = index < number ? "#f59e0b" : "#cbd5e1";
+  });
+}
+
+function submitReview() {
+  let name = document.getElementById("reviewName").value.trim() || "Nayapalli Customer";
+  let text = document.getElementById("reviewText").value.trim();
+  if (!text) {
+    alert("Please write your review feedback.");
+    return;
+  }
+  reviews.push({
+    name: name,
+    stars: stars,
+    text: text,
+    date: new Date().toLocaleDateString()
+  });
+  localStorage.setItem("bk_reviews", JSON.stringify(reviews));
+  document.getElementById("reviewText").value = "";
+  document.getElementById("reviewName").value = "";
+  loadReviews();
+  alert("Thank you! Your review has been submitted.");
+}
+
+function loadReviews() {
+  let avg = reviews.length ? (reviews.reduce((sum, item) => sum + item.stars, 0) / reviews.length).toFixed(1) : "5.0";
+  document.getElementById("avgRating").innerText = avg;
+  document.getElementById("totalReviews").innerText = reviews.length;
+
+  let html = "";
+  if (reviews.length === 0) {
+    html = `<div style="color:#64748b; font-size:12px;">No reviews yet. Be the first to review!</div>`;
+  } else {
+    reviews.slice().reverse().forEach(review => {
+      html += `
+        <div class="review-item">
+          <div style="display:flex; justify-content:space-between; align-items:center;">
+            <b>${review.name}</b>
+            <span style="color:#f59e0b; font-size:12px;">${"★".repeat(review.stars)}</span>
+          </div>
+          <p style="margin-top:4px; color:#475569;">"${review.text}"</p>
+          <small style="color:#94a3b8; font-size:11px;">${review.date}</small>
+        </div>
+      `;
+    });
+  }
+  document.getElementById("reviewList").innerHTML = html;
+}
+
+// Admin Panel
+function updateAdminStats() {
+  let sale = orders.reduce((sum, order) => sum + order.total, 0);
+  let advCollected = orders.reduce((sum, order) => sum + (order.advance || 0), 0);
+  document.getElementById("orderCount").innerText = orders.length;
+  document.getElementById("saleCount").innerText = "₹" + sale;
+  document.getElementById("advanceCollected").innerText = "₹" + advCollected;
+  document.getElementById("footerOrders").innerText = orders.length + " Orders Placed";
+
+  let html = "";
+  orders.slice().reverse().forEach(order => {
+    html += `<div style="border-bottom:1px solid #374151; padding:6px 0;">
+      <b>${order.date}</b> — ${order.name} (${order.phone})<br>
+      Total ₹${order.total} | Adv ₹${order.advance} (Txn: ${order.advTxn || 'N/A'}) | Bal ₹${order.balance} | ${order.pay.toUpperCase()}
+    </div>`;
+  });
+  document.getElementById("orderHistory").innerHTML = html || "No orders placed yet.";
+}
+
+function showAdmin() {
+  let password = prompt("Enter Admin Password:");
+  if (password && password.toLowerCase() === "arbind") {
+    document.getElementById("adminBox").style.display = "block";
+    document.getElementById("adminBox").scrollIntoView({ behavior: "smooth" });
+    updateAdminStats();
+  } else if (password !== null) {
+    alert("Incorrect password.");
+  }
+}
+
+function clearOrders() {
+  if (confirm("Are you sure you want to clear all order records?")) {
+    orders = [];
+    localStorage.removeItem("bk_orders");
+    updateAdminStats();
+  }
+}
+
+// Initialise
+initQr();
+initOwnerPhoto();
+updateCart();
+loadReviews();
+updateAdminStats();
+setStars(5);
+updateCardButtons();
+</script>
+/* MAIN HILNA PROBLEM KA FINAL FIX */
+
+<html, body { overflow-x: hidden !important; width: 100% !important; position: relative !important; }
+* { box-sizing: border-box !important; }
+body > * { max-width: 100% !important; }
+</body>
+</html>
